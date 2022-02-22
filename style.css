@@ -1,0 +1,567 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6, body, p, span, ul, li, a {
+    font-family: 'Spartan', sans-serif;
+}
+
+/* HEADER START */
+header{
+    z-index: 99;
+}
+.customHeader{
+    background-color: #d5d6d0
+}
+.customHeader a img{
+    width: 90px;
+}
+/* menu start */
+.customMenu ul li a {
+    display: inline-block;
+    color: #606060;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .5s;
+    position: relative;
+}
+.customMenu ul li a:hover{
+    color: #355fe2;
+}
+.customMenu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    height: 2px;
+    width: 0;
+    background-color: #355fe2;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.customMenu ul li a:hover::after{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+/* menu end */
+
+/* dropdown menu start */
+.customMenu ul li{
+    position: relative;
+}
+.customMenu ul li ul{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 200px;
+    background-color: #355fe2;
+    border: 10px solid #fff;
+    z-index: 99;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.customMenu ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+.customMenu ul li ul li a{
+    color: #fff;
+    background-color: #355fe2;
+}
+.customMenu ul li ul li a:hover{
+    color: #fff;
+    background-color: #355fe2;
+}
+.customMenu ul li ul li a:hover::after{
+    display: none;
+}
+/* dropdown menu end */
+.customHeader .headerBtn {
+    background: rgb(255, 255, 255);
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    color: rgb(53, 95, 226);
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+    padding-top: 14px;
+}
+.customHeader .headerBtn:hover{
+    color: #fff;
+}
+.customHeader .headerBtn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #355fe2;
+    border-radius: 30px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.customHeader .headerBtn:hover::after{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+/* HEADER END */
+
+/* BANNER START */
+.banner{
+    background-color: #edf6ff;
+    overflow: hidden;
+    position: relative;
+}
+.banner .bannerBtn {
+    background: #355fe2;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+    transition: .5s;
+}
+.banner .bannerBtn:hover{
+    color: #355fe2;
+    background: #fff;
+}
+.bannerImg {
+    height: 650px;
+    width: 650px;
+}
+.bannerImg img {
+    height: 100%;
+    width: 650px;
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    border-radius: 50% 0 50% 50%;
+}
+/* BANNER END */
+
+/* SERVICE START */
+.service {
+    background: url(./img/service-patern.png) no-repeat;
+    background-size: auto;
+    padding: 80px 0;
+    background-position: 6% 93%;
+}
+.serviceTop{
+    position: relative;
+}
+.serviceTop::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 60%;
+    height: 3px;
+    width: 40px;
+    background-color: #355fe2;
+}
+.serviceTop span{
+    color: #355fe2;
+}
+.serviceTop p{
+    font-weight: 300;
+    margin-top: 40px;
+}
+.serviceBox{
+    background-color: #edf6ff;
+    position: relative;
+    transition: .5s;
+}
+.serviceBox:hover{
+    background-color: #355fe2;
+    color: #fff;
+}
+.serviceBox:after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 61%;
+    height: 3px;
+    width: 30px;
+    background-color: #355fe2;
+    transition: .5s;
+}
+.serviceBox:hover:after{
+    width: 40px;
+    background-color: #fff;
+}
+.serviceBox .card-body h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.serviceBox .card-body span {
+    background-color: #355fe2;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50% 50% 50% 0;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    margin-top: 10px;
+}
+.serviceBox .card-body p {
+    font-size: 14px;
+    margin-top: 40px;
+}
+/* SERVICE END */
+
+/* VIDEO START */
+.video {
+    background: linear-gradient( #1d1d39bd, #1d1d39bd), url(./img/video-bg.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 180px 0;
+}
+.videoText h2{
+    position: relative;
+}
+.videoText h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 115%;
+    height: 3px;
+    width: 70px;
+    background-color: #ffffff;
+    transition: .5s;
+    margin: auto;
+}
+.videoText span {
+    color: #355fe2;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background: #fff;
+    border-radius: 50%;
+    line-height: 70px;
+    margin-top: 30px;
+    position: relative;
+}
+.videoText span i{
+    margin-left: 2px;
+}
+.videoText span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    animation: animatedIcon 2s ease 3s infinite;
+}
+.videoText span::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    animation: animatedIcon 2s ease 3s infinite;
+}
+@keyframes animatedIcon{
+0%{
+    border: 1px solid rgb(255, 255, 255);
+    transform: scale(1);
+    opacity: 1;
+}
+100%{
+    border: 1px solid #fff;
+    transform: scale(2.5);
+    opacity: 0;
+}
+}
+
+/* VIDEO END */
+
+/* PRICING START */
+.pricing{
+    background: #f6f9fc;
+    padding: 80px 0;
+}
+.pricing-title {
+    width: 480px;
+    margin: auto;
+}
+.pricing-title span{
+    color: #5da9f4;
+}
+.pricing-title h2{
+    font-weight: 500;
+    position: relative;
+}
+.pricing-title h2::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 3px;
+    width: 50px;
+    background: #3763eb;
+}
+
+.pricing-table{
+    background: #fff;
+    box-shadow: 0 0 20px #ddd;
+    padding: 45px 90px;
+    text-align: center;
+    transition: .5s linear;
+    overflow: hidden;
+}
+.pricing-top p{
+    color: #606060;
+}
+.pricing-top span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.pricing-top h2{
+    font-size: 45px;
+    margin: 20px 0;
+}
+.pricing-top {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+.pricing-bottom ul{
+    list-style: none;
+    padding-left: 0;
+}
+.pricing-bottom ul li{
+    font-weight: 300;
+    padding: 5px 0;}
+.pricingbtn {
+    display: inline-block;
+    text-decoration: none;
+    background: #3763eb;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    transition: .5s linear;
+}
+.pricingbtn:hover{
+    color: #fff !important;
+}
+.pricingbtn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #3763eb;
+    border-radius: 30px;
+    z-index: -1;
+    transition: .5s linear;
+    opacity: 0;
+    visibility: hidden;
+   
+}
+ .pricingbtn:hover::after{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+.pricing-table:hover{
+    color: #fff;
+    background-color: #3763eb;
+}
+.pricing-table:hover .pricingbtn{
+    color: #3763eb;
+    background-color: #fff;
+    
+}
+/* PRICING END */
+
+
+/* PERCHESE NOW START */
+.purchase {
+    background: linear-gradient(#0946ffc9,#0946ffc9), url(./img/free-bg.jpg) no-repeat top center;
+    padding: 160px 0;
+}
+.purcheseText {
+    width: 480px;
+    margin: auto;
+    text-align: center;
+}
+.purcheseText h2{
+    font-size: 31px;
+    font-weight: 700;
+    margin: 10px 0 25px;
+    position: relative;
+}
+.purcheseText h2::after {
+    content: "";
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 50px;
+    background: #fff;
+    margin: auto;
+}
+.purcheseText p{
+    font-weight: 500;
+    line-height: 18px;
+}
+.purcheseText .pricingbtn{
+    background: #fff;
+    color: #5da9f4;
+    margin-top: 20px;
+}
+/* PERCHESE NOW END */
+
+/* NEWSLETTER START */
+.newsletterLeft{
+    background-color: #3763eb;
+}
+.newsletterLeftText p{
+    width: 350px;
+    font-size: 15px;
+    margin: 25px 0;
+}
+.newsletterLeftForm .form-control {
+    border-radius: 25px;
+}
+.newsletterLeftForm .btn-primary {
+    font-size: 18px;
+}
+.newsletterRight {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 270px;
+    padding: 0 30px;
+}
+.newsletterRightText h2{
+    font-size: 23px;
+}
+/* NEWSLETTER END */
+
+/* BRAND START */
+.brand{
+    padding: 80px 0;
+}
+.brandText span{
+    color: #355fe2;
+}
+.brandText h2 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 15px 0 25px;
+}
+.brandText h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 45px;
+    background: #3763eb;
+}
+.card{
+    border-radius: inherit;
+}
+.brand .card img {
+    height: 120px;
+    transition: .5s;
+}
+.brand .card img:hover {
+    background-color: #f3f3f3;
+}
+/* BRAND END */
+
+/* BLOG START */
+.blog{
+    padding: 80px 0;
+}
+.card{
+    position: relative;
+}
+.card .badge {
+    position: absolute;
+    right: 23px;
+    bottom: 191px;
+}
+/* BLOG END */
+
+/* FOOTER START */
+.footer{
+    background-color: #081828;
+    color: #fff;
+}
+.footerInfo{
+    padding: 50px 0;
+    border-bottom: 1px solid rgb(148, 148, 148);
+}
+.footerBox h2{
+    border-left: 1px solid blue;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.footerBox ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.footerBox ul li a{
+    color: #fff;
+    padding: 7px 0;
+    display: inline-block;
+}
+.footerBox ul.extra li a{
+    color: #fff;
+    padding: 0 15px;
+    font-size: 20px;
+    display: inline-block;
+    transition: .5s;
+}
+.footerBox ul li a:hover{
+    letter-spacing: 1px;
+}
+/* FOOTER END */
+
+
+
