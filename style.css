@@ -507,9 +507,11 @@ header{
 .brand .card img {
     height: 120px;
     transition: .5s;
+    opacity: .4;
 }
 .brand .card img:hover {
     background-color: #f3f3f3;
+    opacity: 1;
 }
 /* BRAND END */
 
